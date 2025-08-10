@@ -272,16 +272,16 @@ export function LandingPage() {
                                 Cheesant.
                             </a>
                         </div>
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between flex-col md:flex-row'>
                             <div>
-                                <p className='text-primaryWhite'>42 Meadow Lane, York,<br /> North Yorkshire, YO24 1AB,<br /> United Kingdom</p>
+                                <p className='text-primaryWhite py-3'>42 Meadow Lane, York,<br /> North Yorkshire, YO24 1AB,<br /> United Kingdom</p>
                             </div>
                             <div>
-                                <p className='text-primaryWhite'>What to order some Cheese  ?<br /><span className='font-bold'>+44 7700 900123</span></p>
+                                <p className='text-primaryWhite py-3'>What to order some Cheese  ?<br /><span className='font-bold'>+44 7700 900123</span></p>
                             </div>
                             <div>
-                                <p className='text-primaryWhite'>Check Our Social Media</p>
-                                <div className='flex mt-2'>
+                                <p className='text-primaryWhite py-3'>Check Our Social Media</p>
+                                <div className='flex md:mt-2'>
                                     <InstagramIcon className='text-primaryWhite text-2xl mr-3' />
                                     <FacebookIcon className='text-primaryWhite text-2xl mx-2' />
                                     <EmailIcon className='text-primaryWhite text-2xl mx-2' />
