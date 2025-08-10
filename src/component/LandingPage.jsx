@@ -8,7 +8,7 @@ import cheese4 from "../assets/4_cheese.jpg"
 import chef1 from "../assets/1_chef.png"
 import chef2 from "../assets/2_chef.png"
 import chef3 from "../assets/3_chef.png"
-import ctaImage from "../assets/cta.png"
+import ctaImage from "../assets/image_cta.png"
 import { FaInstagram as InstagramIcon } from "react-icons/fa6";
 import { FaFacebook as FacebookIcon } from "react-icons/fa";
 import { MdEmail as EmailIcon } from "react-icons/md";
