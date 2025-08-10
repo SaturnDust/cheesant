@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+
+    --font-onest : "Onest", sans-serif;
+
+    --color-primaryWhite: #EFEFEF;   
+    --color-mocha: #8D7A6B;     
+    --color-cocoa: #421D0C;  
+    --color-espresso: #261811;  
+    --color-jetblack: #141414;       
+
+    
+}
