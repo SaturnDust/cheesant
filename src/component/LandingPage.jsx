@@ -12,17 +12,33 @@ import ctaImage from "../assets/image_cta.png"
 import { FaInstagram as InstagramIcon } from "react-icons/fa6";
 import { FaFacebook as FacebookIcon } from "react-icons/fa";
 import { MdEmail as EmailIcon } from "react-icons/md";
+import { useRef } from 'react'
 
 
 export function LandingPage() {
+
+    const homeRef = useRef(null);
+    const productRef = useRef(null);
+    const contactUsRef = useRef(null);
+
+    function navMenuClicked(ref) {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
         <div className="font-onest">
 
             <header className="h-[100vh] bg-cover bg-center text-primaryWhite"
-                style={{ backgroundImage: `url('${heroImage}')` }}>
+                style={{ backgroundImage: `url('${heroImage}')` }}
+                ref={homeRef}>
 
                 {/* Navbar di dalam header */}
-                <Navbar />
+                <Navbar
+                    navMenuClicked={navMenuClicked}
+                    homeRef={homeRef}
+                    productRef={productRef}
+                    contactUsRef={contactUsRef} />
+
                 <div className="flex justify-center items-center h-[calc(100vh-5rem)]">
                     <div className="text-center">
                         <motion.h1
@@ -45,8 +61,8 @@ export function LandingPage() {
                         </motion.p>
                     </div>
                 </div>
-
             </header>
+            <div ref={productRef} />
 
             <section>
                 <div className="flex flex-col md:flex-row gap-8 p-12 md:py-40 max-w-300 mx-auto">
@@ -246,12 +262,12 @@ export function LandingPage() {
 
                 </div>
 
-                <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 2 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                className="max-w-3xl mx-auto text-center mt-12 text-cocoa">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 1.3 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="max-w-3xl mx-auto text-center mt-12 text-cocoa">
                     <h2 className="text-2xl md:text-3xl font-semibold text-brown-900">
                         Our Cheese Maker Once Said
                     </h2>
@@ -261,7 +277,7 @@ export function LandingPage() {
                 </motion.div>
             </section>
 
-            <footer className='bg-jetblack'>
+            <footer className='bg-jetblack' ref={contactUsRef}>
                 <div className=' h-100 max-w-300 mx-auto'>
                     <div className='pt-15 px-20'>
                         <div className='mb-5'>
